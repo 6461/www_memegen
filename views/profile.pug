@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h2 #{title}
+    if user.local.email
+      .row
+        // LOCAL INFORMATION
+        h3 User information
+        .col.s12.l8.break-text
+          p.break-text #[strong id:] #{user._id}
+          p.break-text #[strong email:] #{user.local.email}
+          p.break-text #[strong password:] #{user.local.password}
+    if user.facebook.email
+      .row
+        // FACEBOOK INFORMATION
+        h3 Facebook user information
+        .col.s12.l8
+          p.break-text #[strong id:] #{user.facebook.id}
+          p.break-text #[strong email:] #{user.facebook.email}
+          p.break-text #[strong name:] #{user.facebook.name}
+          p.break-text #[strong token:] #{user.facebook.token}
+    .row
+      a.btn-small.waves-effect.waves-light.blue(href='/')
+        i.material-icons.left arrow_back
+        | Back to app
+      a.btn-small.waves-effect.waves-light.blue(href='/logout')
+        i.material-icons.left exit_to_app
+        | Logout

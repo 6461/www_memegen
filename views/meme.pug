@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h2 #{meme.name}
+    .row
+      .col.s12.l6
+        object(class='responsive-img', data=meme.svg_url, type='image/svg+xml')
+    .row
+      a.btn-small.waves-effect.waves-light.blue(href=meme.url + '/update')
+        i.material-icons.left edit
+        | Edit
+      a.btn-small.waves-effect.waves-light.blue(href=meme.url + '/svg_download')
+        i.material-icons.left photo
+        | SVG
+      a.btn-small.waves-effect.waves-light.blue(href=meme.url + '/pdf')
+        i.material-icons.left picture_as_pdf
+        | PDF
+    .row
+      a.btn-small.waves-effect.waves-light.blue(href='/')
+        i.material-icons.left arrow_back
+        | Back to app

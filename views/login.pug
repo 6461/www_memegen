@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h2 #{title}
+    .row
+      // show any messages that come back with authentication
+      if message.length > 0
+        .card-panel.white-text.red.darken-2 #{message}
+      // LOGIN FORM
+      form(action='/login', method='post')
+        .row
+          .input-field.col.s12
+            i.material-icons.prefix mail_outline
+            input#email(type='email', name='email', required='true')
+            label(for='email') Email
+        .row
+          .input-field.col.s12
+            i.material-icons.prefix security
+            input#password(type='password', name='password', required='true')
+            label(for='password') Password
+        button.btn-small.waves-effect.waves-light.blue(type='submit', name='action')
+          | Login
+          i.material-icons.left account_circle
+    .row
+      a.btn-small.waves-effect.waves-light.blue(href='/auth/facebook')
+        i.material-icons.left account_circle
+        | Login with Facebook
+      a.btn-small.waves-effect.waves-light.blue(href='/signup')
+        i.material-icons.left create
+        | Signup			  

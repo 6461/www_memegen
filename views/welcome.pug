@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 #{title}
+  .row
+    p Login or Register with:
+    a.btn-small.waves-effect.waves-light.blue(href='/login')
+      i.material-icons.left account_circle
+      | Login
+    a.btn-small.waves-effect.waves-light.blue(href='/signup')
+      i.material-icons.left create
+      | Signup
