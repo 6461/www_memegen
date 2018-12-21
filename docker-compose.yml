@@ -1,15 +1,17 @@
 version: "3"
 services:
   app:
-    container_name: ajax-app
+    container_name: memegen-app
     restart: always
     build: .
     ports:
       - "8080:8080"
     links:
       - mongo
+    depends_on:
+      - mongo
   mongo:
-    container_name: ajax-mongo
+    container_name: memegen-mongo
     image: mongo
     ports:
       - "27017:27017"

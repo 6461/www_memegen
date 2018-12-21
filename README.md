@@ -1,1 +1,1 @@
-# www_memegen
+# memegen
