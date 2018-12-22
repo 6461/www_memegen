@@ -83,7 +83,7 @@ module.exports = function(app, passport) {
     });
 	
 	// GET request for list of all items
-	app.get('/meme/list', isLoggedIn, memeController.api_get_list);
+	app.get('/meme/list', memeController.api_get_list);
 	
 	// GET request for creating an item
 	app.get('/meme/create', isLoggedIn, memeController.navi_get_create);
@@ -95,7 +95,7 @@ module.exports = function(app, passport) {
 	app.get('/meme/:id/delete', isLoggedIn, memeController.api_get_delete);
 
 	// GET request for JSON
-	app.get('/meme/:id/json', isLoggedIn, memeController.api_get_json);
+	app.get('/meme/:id/json', memeController.api_get_json);
 	
 	// GET request for SVG
 	app.get('/meme/:id/svg', isLoggedIn, memeController.file_get_svg);
