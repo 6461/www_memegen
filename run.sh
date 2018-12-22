@@ -15,6 +15,6 @@ echo "Waiting 10 seconds..."
 sleep 10
 
 # Debug mode
-DEBUG=www_memegen:* npm run devstart
+# DEBUG=www_memegen:* npm run devstart
 # normal start
-#npm start
+npm start

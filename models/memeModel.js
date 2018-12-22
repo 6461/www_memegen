@@ -48,12 +48,12 @@ var MemeSchema = new Schema({
 	image_x: {
 		type:		Number,
 		required:	true,
-		min:		1,
+		min:		0,
 		max:		9999},
 	image_y: {
 		type:		Number,
 		required:	true,
-		min:		1,
+		min:		0,
 		max:		9999},
 	font_size: {
 		type:		Number,
@@ -68,12 +68,12 @@ var MemeSchema = new Schema({
 	text_x: {
 		type:		Number,
 		required:	true,
-		min:		1,
+		min:		0,
 		max:		9999},
 	text_y: {
 		type:		Number,
 		required:	true,
-		min:		1,
+		min:		0,
 		max:		9999},
 	/* Use the name "caption" instead of "text" to be safe */
 	/* "text" is not a reserved word but may cause problems */
