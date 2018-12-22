@@ -19,7 +19,7 @@ describe('Test Mongoose database connection', () => {
   });
 });
 
-describe('Test routers', () => {
+/* describe('Test routers', () => {
   test('GET request for list of all items', (done) => {
     request(app).get('/meme/list').set('Accept', 'application/json')
     .then((response) => {
@@ -77,4 +77,4 @@ describe('Test routers', () => {
       });
   });
   mongoose.disconnect();
-});
+}); */
