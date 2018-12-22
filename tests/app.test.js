@@ -76,4 +76,5 @@ describe('Test routers', () => {
         throw new Error('Delete error: ' + err);
       });
   });
+  mongoose.disconnect();
 });
